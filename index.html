@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Library Explorer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .file-list {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .file-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 0.75rem 0;
+    }
+    .file-name {
+      color: #333;
+      font-weight: 500;
+      word-break: break-word;
+    }
+    .download-btn {
+      padding: 0.4rem 0.8rem;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .download-btn:hover {
+      background: #0056b3;
+    }
+    @media (max-width: 600px) {
+      .file-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .download-btn {
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>My Book Library</h1>
+  <div class="file-list">
+    <div class="file-item">
+      <div class="file-name">Book One - Intro to AI.pdf</div>
+      <a class="download-btn" href="#" download>Download</a>
+    </div>
+    <div class="file-item">
+      <div class="file-name">Book Two - Deep Learning.epub</div>
+      <a class="download-btn" href="#" download>Download</a>
+    </div>
+    <div class="file-item">
+      <div class="file-name">Folder: Programming Books</div>
+      <a class="download-btn" href="#">Open Folder</a>
+    </div>
+  </div>
+</body>
+</html>
