@@ -29,7 +29,7 @@ export function renderToIframe(
       }
     }
     iframe.addEventListener('load', onLoad, { once: true })
-    iframe.src = `/templates/${templateId}/template.html`
+    iframe.src = `${import.meta.env.BASE_URL}templates/${templateId}/template.html`
   })
 }
 
