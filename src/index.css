@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  min-height: 0;
+}
+
+/* Suppress outline on drag handles; managed via focus-visible */
+[data-no-dnd-outline]:focus {
+  outline: none;
+}

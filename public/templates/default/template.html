@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CV</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="render.js"></script>
+</head>
+<body>
+  <div id="cv-root"></div>
+  <script>
+    // Called by the parent app after this page loads (same-origin iframe).
+    function renderCV(data, lang) {
+      var root = document.getElementById('cv-root');
+      if (root) root.innerHTML = buildCvHtml(data, lang || 'EN');
+    }
+    // postMessage fallback for future cross-origin use
+    window.addEventListener('message', function (e) {
+      if (e.data && e.data.type === 'RENDER_CV') renderCV(e.data.data, e.data.lang);
+    });
+  </script>
+</body>
+</html>
